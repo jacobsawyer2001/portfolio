@@ -1,0 +1,111 @@
+html { 
+background-image: url('https://r1.ilikewallpaper.net/iphone-wallpapers/download/75370/Judge-Harry-Pregerson-Interchange-iphone-wallpaper-ilikewallpaper_com.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+body {
+  font-family: Overpass;
+  width: 70%;
+  margin: auto;
+  min-width: 340px;
+  font-weight: 500;
+  padding: 3em;  
+  background-color: rgba(255,255,255,.6);
+}
+
+h1, h2 {
+	text-align: center;
+	margin-top: 3em;
+}
+
+figure {
+  text-align: center;
+}
+
+figure > img {
+  width: 100%;
+  max-width: 400px;
+}
+
+figcaption {
+  font-size: .85em;
+  margin-top: .3em;
+}
+
+.summary-table {
+  border: 3px solid;
+  min-width: 333px;
+  height: 420px;
+  float: left;
+  margin-right: 2em;
+}
+
+.summary-table > p {
+  margin: .3em .7em;
+  display: flex;
+  /*space-between allows the attribute names to be aligned left and the attribute values to be aligned right*/
+  justify-content: space-between;
+}
+
+.subhead {
+background-color: rgb(27, 247, 108);
+  font-size: 1.25em;
+  text-align: center;
+  margin: .3em .5em;
+  border: 3px solid;
+}
+
+.indent {
+  margin-left: 1.7em;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.divider {
+  border-bottom: 10px solid;
+  padding-bottom: 3px;
+}
+
+.small {
+  font-size: .8em;
+}
+
+.text {
+  line-height: 200%;
+  margin: 1.5em;
+}
+
+.box {
+    width: 160px;
+    height: 300px;
+    padding: 10px;
+    margin: 10px;
+    display: block;
+    background-color: blue;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box-header {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
+  color: white;
+  background-color: red;
+  padding: .5em;
+  min-height: 2.5em;
+}
+
+.box-footer {
+  color: white;
+  text-align: center;
+  padding: .5em;
+}

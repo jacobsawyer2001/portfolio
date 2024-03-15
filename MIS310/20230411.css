@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: var(--logo-width) 1fr;
+  background-color: #ff4700;
+  font-size: var(--header-font);
+  position: fixed;
+  top: 0;
+}
+
+
+.logo {
+  width: var(--logo-width);
+  margin: var(--margin) 0 0 var(--margin);
+}
+
+header h2 {
+  width: var(--logo-width);
+  font-family: Anton;
+  color: #000000;
+  margin-left: var(--margin);
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav a {
+  text-align: center;
+  text-decoration: underline;
+  font-family: Quicksand;
+  font-weight: bold;
+  color: #000000;
+  margin: var(--margin);
+}
+
+nav a:hover {
+  color: #ff4700;
+  background-color: #000000;
+}
+
+.icon {
+  width: var(--icon-width);
+}
+
+.green {
+  color: #52b001;
+  font-weight: bold;
+}
+
+main {
+  background-image: var(--bkgd);
+  background-size: 100%;
+  text-align: center;
+  font-family: Quicksand;
+  margin-top: var(--main-margin);
+}
+
+input[type='submit'], #buy button {
+  margin: .6em;
+  background-color: #ff4700;
+  font-family: Anton; 
+}
+
+.main-img {
+  width: var(--img-width);
+  height: var(--img-width);
+  border: 6px solid #ff4700;
+  border-radius: 25%;
+}
+
+.sub-img {
+  width: calc(var(--img-width) * .65);
+  height: calc(var(--img-width) * .75);
+  border: 3px solid #ff4700;
+  border-radius: 25%;
+  margin: 1.5rem 0 1.5rem 1.5rem;
+}
+
+/* It is important to use display: none instead of visibility: hidden because display: none keeps the hidden textboxes from taking up space. */
+.hidden {
+  display: none;
+  justify-content: space-evenly;
+}
+
+.textbox {
+  margin: calc(var(--margin) * 2);
+  width: 55%;
+  background: rgba(255,255,255,.75);
+  padding: .25em;
+}
+
+.main-textbox {
+    width: var(--main-width);
+	border: none;
+    margin: 1em auto;
+    padding: .4em;
+    background: rgba(255,255,255,.75);
+  }
+  
+ .first {
+	 margin-top: var(--main-margin);
+ }
+
+.main-textbox h1, .textbox h1 {
+  font-family: Anton;
+  font-size: 1.2em;
+}
+
+#buy:target {
+  background-color: rgba(82, 176, 1, .75);
+}
+
+#buy p:first-of-type {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+input[type='submit']:hover, #buy button:hover {
+	color: #000000;
+	background-color: #ff4700;
+}
+
+@media(min-width: 901px) {
+    :root {
+    --logo-width: 13rem;
+    --logo-height: 3rem;
+    --img-width: 21rem;
+    --icon-width: 4rem;
+    --header-font: 1rem;
+    --margin: .7em;
+	--main-margin: 5rem;
+    --main-width: 60%;
+    --bkgd: url('https://wallpapercave.com/wp/wp1954108.jpg')
+  }
+
+  .hidden:target {
+  display: flex;
+  margin: 0 auto;
+}
+}
+
+@media (max-width: 900px) {
+  :root {
+    --logo-width: 10rem;
+    --logo-height: 3rem;
+    --img-width: 15rem;
+    --icon-width: 3rem;
+    --header-font: .7rem;
+    --margin: .3em;
+	--main-margin: 3rem;
+    --main-width: 75%;
+    --bkgd: url('https://image.winudf.com/v2/image/Y29tLnRvcm5hZG8ubGl2ZS53YWxscGFwZXIucmV2NTgzNTMzNF9zY3JlZW5fMF8xNTI3NzU0Mzc3XzA2MA/screen-0.jpg?h=500&fakeurl=1&type=.jpg')
+  }
+
+  header p {
+    display: none;
+  }
+
+  .icon {
+    position: relative;
+    top: 1em;
+  }
+
+  .hidden:target {
+  display: block;
+  width: 100%;
+}
+
+  .textbox {
+    margin: 2em auto;
+  }
+  
+ .hidden:target{
+	 padding-top: 3rem;
+ }
+}

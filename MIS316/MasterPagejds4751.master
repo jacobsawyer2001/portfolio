@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPagejds4751.master.cs" Inherits="MIS316_MasterPagejds4751" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        Jacob Sawyer (jds4751@uncw.edu)<br />
+        <asp:HyperLink ID="hlMyPortfolio" runat="server" NavigateUrl="~/Default.aspx">My Portfolio</asp:HyperLink>
+&nbsp;&gt;
+        <asp:HyperLink ID="hlMIS316" runat="server" NavigateUrl="~/MIS316/Default.aspx">MIS 316</asp:HyperLink>
+        <br />
+        <br />
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

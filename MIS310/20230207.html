@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Survey</title>
+    <link rel="stylesheet" href="2023-02-07.css">
+  </head>
+  <body>
+    <!--the h1 and p elements make up the form's header and are part of the class 'top' for styling purposes-->
+    <h1 class='top'>Anti-Discrimination Survey</h1>
+      <p class='top'>Thank you for allowing us to serve you. Our company is working to eradicate racial and age-based discrimination from its operations. Please help us to do so by completing our quick feedback survey.</p>
+      <!--start of form-->
+      <form 
+  id='survey-form'>
+        <p class='subtitle'>Please supply the following personal data below. It is only aggregated and used to assess customer satisfation by age group and race. We will <i>never</i> sell your data to third parties.</p>
+        <!--the form is divided into two sections: a personal info section and a satisfaction rating section. the fieldset tags indicate the start and end of both-->
+        <fieldset>
+          <!--asking for customer name-->
+          <label for='name'>What is your name?
+            <input id='name' type='text' name='name' required/>
+          </label>
+          <!--asking for an ID to verify the authenticity of the response-->
+          <label for='number'>What is your Appointment ID? (This auto-generated number helps prevent trolling and can be located in your post-appointment instructions.)
+            <input type='number' id='number' name ='name' min='10000000' max='19999999' required />
+          </label>
+          <!--asking for email-->
+          <label for='email'>What is your email address?
+            <input id='email' type='email' name='email' required />
+          </label>
+          <!--asking for age range-->
+          <label for='age'>What is your age range?
+            <select id='age' name='age' required>
+              <option value=''>-Select-</option>
+              <option value='young'>18-29</option>
+              <option value='young-middle'>30-39</option>
+              <option value='middle'>40-49</option>
+              <option value='middle-elderly'>50-59</option>
+              <option value='elderly'>60-69</option>
+              <option value='very-elderly'>70+</option>
+            </select>
+          </label>
+          <!--asking for race; customers can select more than one if mixed-race-->
+          <label>
+            What is your race? (Check all that apply.)
+            <label for='white'>
+              <input name='race' type='checkbox' id='white' value='white' />
+              white
+            </label>
+            <label for='Black'>
+              <input name='race' type='checkbox' id='Black' value='Black'/>
+              Black
+            </label> 
+            <label for='Hispanic' class='box'>
+              <input name='race' type='checkbox' id='Hispanic' value='Hispanic'/>
+              Hispanic 
+            </label>
+            <label for='Asian'>
+              <input name='race' type='checkbox' id='Asian' value='Asian'/>
+              Asian
+            </label>
+            <label for='Native American'>
+              <input name='race' type='checkbox' id='Native American' value='Native'/>
+              Native American
+            </label>
+            <label for='Other'>
+              <input name='race' type='checkbox' id='Other' value='Other'/>
+              Other
+            </label>
+            <label for='prefer-not'>
+              <input name='race' type='checkbox' id='prefer-not' value='Prefer not to say'/>
+              Prefer not to say
+            </label> 
+          </label>
+        </fieldset>
+        <!--end of first fieldset-->
+        <!--header for second fieldset-->
+        <p class='subtitle'>Please rate your satisification with each of the following dimensions (with one being low and five being high).</p>
+        <!--start of second fieldset-->
+        <fieldset>
+          <p class='blue'>Appointment scheduling (including demeanor and attitude of customer service representative)</p>
+          <!--all choices (1,2,3,4,5) have their own label elements to make styling easier; each label can go on a separate line while buttons and numbers within the same labels go on the same line-->
+          <label for='1one'>
+            <input id='1one' type='radio' name='a' value='1' class='inline'/>1
+          </label>
+          <label for='1two'>
+            <input id='1two' type='radio' name='a' value='2' class='inline'/>2
+          </label>
+          <label for='1three'>
+            <input id='1three' type='radio' name='a' value='3' class='inline'/>3
+          </label>
+          <label for='1four'>
+            <input id='1four' type='radio' name='a' value='4' class='inline'/>4
+          </label>
+          <label for='1five'>
+            <input id='1five' type='radio' name='a' value='5' class='inline'/>5
+          </label>
+          <p>Timeliness and speed of service</p>
+          <label for='2one'>
+            <input id='2one' type='radio' name='b' value='1' class='inline'/>1
+          </label>
+          <label for='2two'>
+            <input id='2two' type='radio' name='b' value='2' class='inline'/>2
+          </label>
+          <label for='2three'>
+            <input id='2three' type='radio' name='b' value='3' class='inline'/>3
+          </label>
+          <label for='2four'>
+            <input id='2four' type='radio' name='b' value='4' class='inline'/>4
+          </label>
+          <label for='2five'>
+            <input id='2five' type='radio' name='b' value='5' class='inline'/>5
+          </label>
+          <p>Performance of staff serving you (e.g. did they know what they were doing?)</p>
+          <label for='3one'>
+            <input id='3one' type='radio' name='c' value='1' class='inline'/>1
+          </label>
+          <label for='3two'>
+            <input id='3two' type='radio' name='c' value='2' class='inline'/>2
+          </label>
+          <label for='3three'>
+            <input id='3three' type='radio' name='c' value='3' class='inline'/>3
+          </label>
+          <label for='3four'>
+            <input id='3four' type='radio' name='c' value='4' class='inline'/>4
+          </label>
+          <label for='3five'>
+            <input id='3five' type='radio' name='c' value='5' class='inline' >5
+          </label>
+          <p>Demeanor and attitude of staff serving you</p>
+          <label for='4one'>
+            <input id='4one' type='radio' name='d' value='1' class='inline'/>1
+          </label>
+          <label for='4two'>
+            <input id='4two' type='radio' name='d' value='2' class='inline'/>2
+          </label>
+          <label for='4three'>
+            <input id='4three' type='radio' name='d' value='3' class='inline'/>3
+          </label>
+          <label for='4four'>
+            <input id='4four' type='radio' name='d' value='4' class='inline'/>4
+          </label>
+          <label for='4five'>
+            <input id='4five' type='radio' name='d' value='5' class='inline' >5
+          </label>
+          <p>Quality of post-appointment instructions, if applicable (e.g. clarity, conciseness)</p>
+          <label for='5one'>
+            <input id='4one' type='radio' name='e' value='1' class='inline'/>1
+          </label>
+          <label for='5two'>
+            <input id='5two' type='radio' name='e' value='2' class='inline'/>2
+          </label>
+          <label for='5three'>
+            <input id='5three' type='radio' name='e' value='3' class='inline'/>3
+          </label>
+          <label for='5four'>
+            <input id='5four' type='radio' name='e' value='4' class='inline'/>4
+          </label>
+          <label for='5five'>
+            <input id='5five' type='radio' name='e' value='5' class='inline' >5
+          </label>
+          <label for='comments'>
+            <textarea placeholder='Any additional comments or concerns?' rows='3' id='comments' name='comments'></textarea>
+          </label>
+        </fieldset>
+          <!--button to submit the response-->
+          <label>
+            <input type='submit' VALUE='Submit'/>
+          </label>
+      </form>
+  </body>
+</html>

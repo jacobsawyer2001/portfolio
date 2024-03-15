@@ -1,0 +1,375 @@
+* {
+     scroll-behavior: smooth;
+}
+
+body {
+    font-weight: 700;
+    margin: 0 auto;
+    min-width: 420px;
+}
+
+
+/*background-attachment:fixed does not work on mobile*/
+.bg {
+     background-image: url('https://img.wallpapic.com/i8241-149-823/medium/nature-forest-old-growth-waterfall-wallpaper.jpg');
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     position: fixed;
+     height: 100vh;
+     width: 100vw;
+}
+
+header {
+    font-family: var(--head-fontstyle);
+    display: grid;
+    grid-template-columns: var(--header-width) auto;
+    font-size: var(--header-font);
+    width: 100%;
+    padding: 0 1rem;
+    position: fixed;
+    top: 0;
+    background: var(--radial);
+    color: var(--dk-br);
+    z-index: 97;
+}
+
+nav {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+}
+
+nav a {
+    height: var(--button-width);
+    width: var(--button-height);
+    margin-right: 1rem;
+}
+
+nav button {
+    margin: .3rem auto;
+    color: var(--lgt-gr);
+    background-color: var(--dk-br); 
+    height: 90%;
+}
+
+/*re-colored icons at https://codepen.io/sosuke/pen/Pjoqqp*/
+button > img{
+    padding: 0;
+    width: 100%;
+    filter: invert(94%) sepia(48%) saturate(3745%) hue-rotate(18deg) brightness(101%) contrast(70%);
+}
+
+button:hover {
+    color: var(--dk-br);
+    background-color: var(--lgt-gr);
+}
+
+button > img:hover {
+    filter: invert(30%) sepia(8%) saturate(3747%) hue-rotate(337deg) brightness(92%) contrast(90%);
+}
+
+/*animations*/
+
+@keyframes palm {
+    0% {
+        transform: rotateZ(0deg);
+        transform-origin: bottom left;
+    }
+
+
+    100% {
+        transform: rotateZ(70deg);
+        transform-origin: bottom left;
+    }
+}
+
+#palm {
+    animation: palm 2s infinite ease-in;
+    width: 40%;
+}
+
+@keyframes heart {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(.7);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#heart {
+    animation: heart 3s infinite ease-in-out;
+}
+
+/*main*/
+main {
+    margin: 7rem auto;
+    width: var(--body-width);
+    max-width: 900px;
+    background-color: rgba(255,255,255,.67);
+    padding: var(--main-pad);
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+main h2 {
+    font-family: var(--head-fontstyle) !important;
+}
+
+details {
+    width: 95%;
+    border: 5px var(--x-dk-gr) solid;
+    margin: 0 auto;
+    padding: .7rem;
+    background-color: var(--lgt-bl);
+    color: var(--x-dk-gr);
+}
+
+details:not(:last-of-type) {
+    border-bottom: none;
+}
+
+details summary {
+    font-family: var(--head-fontstyle);
+    font-size: calc(1.3 * var(--body-font));
+}
+
+main p, li, main, h3 {
+    line-height: 1.7rem;
+    font-family: var(--body-fontstyle);
+    font-size: var(--body-font);
+    color: var(--x-dk-gr);
+}
+
+details .buttons a {
+   display: flex;
+   align-items: center;
+   text-decoration: none;
+}
+
+main button {
+    font-family: var(--head-fontstyle);
+    font-weight: 800;
+	font-size: calc(1.3 * var(--body-font));
+    color: var(--lgt-gr);
+    background-color: var(--dk-br); 
+    width: 100%;
+}
+
+button:hover, input[type='submit']:hover {
+    color: var(--dk-br);
+    background-color: var(--lgt-gr);
+}
+
+h1 {
+    font-family: var(--head-fontstyle);
+}
+
+
+table {
+    border-collapse: collapse;
+    border: 5px var(--dk-br) solid;
+    margin: 1em auto;
+    width: 90%;
+}
+
+th, td {
+    border: 1px var(--dk-br) solid;
+    border-right: 5px var(--dk-br) solid;
+    color: var(--dk-br);
+    background-color: var(--lgt-gr);
+    text-align: center;
+    font-size: 1em;
+    padding: .5em 0;
+}
+
+thead > tr {
+    border-bottom: 5px var(--dk-br) solid;
+}
+
+thead > td {
+    font-size: 1.2em;
+}
+
+h2 {
+    background-color: var(--dk-gr);
+    color: #ffffff;
+    padding: .3rem;
+    font-family: var(--body-fontstyle);
+    font-size: calc(1.3 * var(--body-font));
+}
+
+/*ensures section header is not hidden (by nav bar) when clicking nav button*/
+div:target {
+    padding-top: 7rem;
+}
+
+img {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+figure > img {
+    border: 7px solid var(--x-dk-gr);
+    width: 85%;
+}
+
+figcaption {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: .5rem;
+    font-size: calc(.83 * var(--body-font));
+    color: var(--x-dk-gr);
+    line-height: 1.1rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.flex > div {
+    border: 5px var(--x-dk-gr) solid;
+    margin: calc(.5 * var(--header-font)) calc(.5 * var(--header-font));
+    background-color: var(--lgt-br);
+}
+
+.flex p {
+    color: var(--x-dk-gr);
+    font-family: var(--head-fontstyle);
+    font-size: calc(1.7 *var(--body-font));
+    font-weight: bold;
+    padding: .5rem;
+   text-align: center;
+}
+
+.important {
+    background-color: #ff3b3b;
+    color: #ffffff;
+}
+
+.i {
+    font-style: italic;
+}
+
+form {
+    margin-top: 1.5rem;
+}
+
+fieldset {
+    border: 5px solid var(--dk-br);
+    padding-top: 1.5rem;
+    background-color: var(--lgt-gr);
+    color: var(--dk-br);
+}
+
+fieldset:not(:last-of-type) {
+    border-bottom: none;
+}
+
+label {
+    display: block;
+    padding-top: 1.5rem;
+}
+
+input[type='text'], input[type='email'] { 
+    line-height: 1.5rem;
+}
+
+input[type='submit'] {
+    font-family: var(--head-fontstyle);
+    font-weight: 800;
+	font-size: var(--body-font);
+    color: var(--lgt-gr);
+    background-color: var(--dk-br); 
+    width: 100%;
+}
+
+/*Footer*/
+
+footer {
+    position: fixed;
+    background: var(--radial);
+    bottom: 0;
+    height: 10vh;
+    z-index: 2;
+    width: 100%;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    align-items: center;
+
+}
+
+footer button  {
+    margin: 0 auto;
+    padding: .05rem;
+    color: var(--lgt-gr);
+    background-color: var(--dk-br);
+    font-family: var(--head-fontstyle);
+    font-size: calc(.9 * var(--body-font));
+    font-weight: 1000;
+    width: 80%;
+}
+
+footer a {
+    margin: 0 auto;
+    width: 80%;
+}
+
+footer a > button {
+    width: 100%;
+    margin: 0 auto;
+}
+/* conditional width styles */
+
+:root {
+    --radial: radial-gradient(circle at 95% 5%, #fffddb, #f9ee73 8%, #bfc307 20%, #a6c601 35%, #57a208 55%);
+    --head-fontstyle: 'Annie Use Your Telescope';
+    --body-fontstyle: 'EB Garamond';
+    --lgt-gr: #a7d930;
+    --dk-gr: #507b00;
+    --x-dk-gr: #385803;
+    --lgt-br: #fcaf6b;
+    --dk-br: #7b4425;
+    --lgt-bl: #6fd1ff;
+}
+
+@media (min-width: 901px) {
+    :root {
+    --header-width: 500px;
+    --header-font: 1.3rem;
+    --button-width: 80px;
+    --button-height: 80px;
+    --body-font: 1.2rem;
+    --body-width: 60%;
+    --img-width: 70%;
+    --main-pad: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    :root {
+        --header-width: 140px;
+        --header-font: .7rem;
+        --button-width: 42px;
+        --button-height: 42px;
+        --body-font: .9rem;
+        --body-width: 80%;
+        --img-width: 85%;
+        --main-pad: 1rem;
+    }
+}

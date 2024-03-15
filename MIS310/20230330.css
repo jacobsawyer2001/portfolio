@@ -1,0 +1,252 @@
+html {
+  background-image: url('https://cdn11.bigcommerce.com/s-491hew/images/stencil/500x659/products/4426/6278/Wide_Ruled_Notebook_holes__96140.1658407220.png?c=2');
+  min-width: 350px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-image: url('https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701690101.jpg');
+  background-size: 100%;
+  color: #cce010;
+}
+
+header h1, header h3 {
+  font-family: 'Special Elite';
+  text-align: center;
+  
+  margin: 0 auto;
+  text-decoration: underline;
+}
+
+.summary > p {
+  position: absolute;
+  height: 1em;
+  width: 100%;
+text-align: center;
+}
+
+header h3 {
+	position: absolute;
+	width: 100%;
+	font-size: .9em;
+}	
+
+header > section {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: 0 auto;
+  padding-left: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+header p {
+  display: table-cell;
+  vertical-align: middle;
+  width: 120px;
+  height: 80px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+}
+
+header p:hover {
+  background-color: #ffffff;
+  border: 3px solid #ffffff;
+  color: #000001;
+}
+
+hr {
+  border: 10px solid brown;
+}
+
+p {
+   font-family: 'Mali';
+   font-size: 1rem;
+}
+
+main {
+  width: 100%;
+  font-size: .7em;
+  max-width: 1000px;
+}
+
+main h1 {
+  font-family: 'Special Elite';
+  padding-top: 24px;
+  padding-left: 80px;
+}
+
+
+main a {
+  background-color: #e8fc30;
+  color: #000000;
+}
+
+main a:hover {
+	color: #e8fc30;
+	background-color: #000000;
+}	
+
+.intrasite {
+	color: #ffffff;
+	background-color: #000000;
+}
+
+.intrasite:hover {
+	background-color: #ffffff;
+  border: 3px solid #ffffff;
+  color: #000001;
+}
+
+/*toggles visibility of sections*/
+
+.popup {
+  display: none;
+}
+
+.popup:target {
+  display: block;
+}
+
+table {
+  margin: 0 6rem;
+}
+
+table, tr, th, td {
+  border: 1px solid #111111;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  text-align: center;
+  font-family: Mali;
+}
+
+.usa > th, .usa > td {
+  background-color: #eb291e;
+color: #ffffff;
+}
+
+/*conditional width styles*/
+
+@media (min-width: 800px) {
+  html {
+    background-size: 1200px 800px;
+  }
+
+  header {
+    font-size: .8em;
+  }
+  header h1 {
+  padding: 2em;
+  }
+  
+  header h3 {
+	 top: 9em;
+  }	  
+
+  i {
+    display: none;
+  }
+
+  .summary > p {
+    top: 7em;
+  }
+
+  header > section {
+    justify-content: center;
+  }
+
+  header p {
+    padding: 6px;
+  }
+
+  main h1 {
+    padding: 33px 0 0 145px;
+  }
+
+  main p {
+    font-size: 1.1rem;
+    line-height: 1.5em;
+    padding: 7px 40px 0px 145px;
+  }
+  
+  table {
+	font-size: 1.2rem;
+	margin-left: 8.5em;
+  }
+}
+
+@media (max-width: 799px) {
+  html {      background-size: 800px 700px;
+  }
+
+ a {
+   width: 110px;
+   margin: 0 auto;
+ }
+  
+ header {
+   font-size: .42em;
+ }
+
+ header h1 {
+   padding: 2em;
+ }
+
+ i[class='fas fa-sort-down'] {
+   position: fixed;
+   right: 7px;
+   top: 90px;
+   font-size: 4em;
+   color: #ffffff;
+ }
+
+ .summary > p {
+   top: 5em;
+ }
+ 
+ header h3 {
+	 top: 5em;
+ }
+
+ header > section {
+   max-height: 60px; 
+   overflow: scroll;
+ }
+
+ header p {
+   font-size: .7rem;
+   width: 60px;
+   height: 60px;
+ }
+
+  main {
+    max-height: 350px;
+    overflow: scroll;
+  }
+
+  main h1 {
+    padding: 5px 0 0 95px;
+  }
+
+  main p {
+    line-height: 1.485em;
+    padding: 4.5px 40px 0px 95px;
+  }
+  
+  table {
+	 font-size: .65rem;
+  }
+}
+
+

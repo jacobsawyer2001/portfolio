@@ -1,0 +1,63 @@
+/* setting the background color for the space outside the form*/
+html {
+  background-color: rgb(0,0,0);
+}
+
+body {
+  background-color: hsla(180, 100%, 80%, 1);
+  /* setting default system font */
+  font-family: system-ui;
+  /* setting the width relative to the screen size */
+  width: 40%;
+  /* centering the page */
+  margin: 0 auto;
+  padding: 80px;
+}
+
+/* setting specific text properties for the top of the form for emphasis */
+.top {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* removing all borders from the two major sections/fieldsets of the survey */
+fieldset {
+  border: none;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+/* !important allows h1 (as a member of the .top class) to override the class's font-size while retaining the rest of the class's settings */
+h1 {
+  font-size: 36px !important;
+}
+
+label {
+  display: block;
+  padding: .5em;
+}
+
+/* extending each box the user can enter text all the way across the page */
+input[type='text'], input[type='email'], input[type='number'], input[type='textarea'] {
+  width: 100%;
+}
+
+/* highlighting the headers for both parts of the survey */
+.subtitle {
+  background-color: hsla(65, 90%, 50%, 1);
+}
+
+input[type='submit'] {
+  width: 60%;
+  font-family: system-ui;
+  color: rgba(255,255,255,1);
+  background-color: rgba(0, 19, 224, 1);
+  /*both display: block and  margin: auto are needed to center the button*/
+  display: block;
+  margin: auto;
+  padding: 1rem;
+  font-size: 19px;
+}
